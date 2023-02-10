@@ -1,0 +1,40 @@
+ion-content{
+  --padding-top: 8%;
+}
+.icon-usuario{
+  width: 50px;
+  height: auto;
+}
+.cabecera{
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
+.nombre-usuario{
+  margin-right: 35px;
+  margin-top: 20px;
+}
+.texto-intro{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding: auto;
+}
+.tarjetas{
+  display:flex;
+  max-width: 50%;
+}
+// .tarjetas-izq{
+//   display: flex;
+//   flex-direction: column;
+// }
+// .tarjetas-der{
+//   display:flex;
+//   flex-direction:column;
+// }
+// .tarjetas-izq{
+//   float: left;
+// }
+// .tarjetas-der{
+//   float: right;
+// }
