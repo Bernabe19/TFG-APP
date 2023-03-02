@@ -1,14 +1,122 @@
 ion-content{
-  --padding-top: 40%;
+  --padding-top: 10%;
 }
-
-.input-group {
-	background: #fff;
-	border-radius: 10px;
-	overflow: hidden;
-	margin-bottom: 15px;
+.cabecera{
+  display: flex;
+  align-items: flex-start;
+  height: 20%;
+  width: 100%;
 }
+.volver{
+  height: 40%;
+  width: 20%;
+  color: var(--ion-color-grisaux);
+}
+ion-img{
+  align-self: center;
+  height: 50%;
+  width: 60%;
+}
+form{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+}
+.campo_usuario{
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: var(--ion-color-grisaux);
+  width: 90%;
+  height: 15%;
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  display: flex;
+  align-items: center;
+}
+.campo_password{
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: var(--ion-color-grisaux);
+  width: 90%;
+  height: 15%;
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  margin-top: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.usuario{
+  background-color: var(--ion-color-grisaux);
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  outline: none;
+  border: 0;
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
 
+}
+.password{
+  background-color: var(--ion-color-grisaux);
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  outline: none;
+  border: 0;
+  box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+}
+button{
+  justify-self: flex-end;
+  font-family: 'Fredoka One', cursive;
+  background-color: var(--ion-color-fondogeneral);
+  color: var(--ion-color-verdefosfo);
+  border: 2px solid black;
+  width: 75%;
+  height: 20%;
+  border-radius: 20px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 100%;
+  margin-top: 12%;
+}
+::placeholder{
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  font-size: 90%;
+}
+.icon_field{
+  height: 70%;
+  width: 10%;
+  justify-self: flex-start;
+}
+#icon_lock{
+  height: 60%;
+}
+#icon_user{
+  margin-left: 5%;
+}
+.forma{
+  margin-top: 82%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 23%;
+  width: 100%;
+  border-radius: 200px 200px 0 0;
+  background-color: var(--ion-color-grisaux);
+}
+#eye{
+  display: none;
+}
+#no_eye{
+
+}
 // .errors {
 // 	font-size: small;
 // 	color: #fff;

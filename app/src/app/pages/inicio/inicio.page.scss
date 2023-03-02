@@ -1,0 +1,59 @@
+.contenedor{
+  height: 45%;
+  margin-top: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.logo{
+  width: 50% ;
+  height: auto;
+}
+.botones{
+  height: 15%;
+  margin-top: 37%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+h3{
+  color: var(--ion-color-verdefosfo);
+  font-family: 'Fredoka One', cursive;
+}
+p{
+  color: var(--ion-color-blancotexto);
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 95%;
+
+}
+.botones>button{
+  border-radius: 14px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  height: 35%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+}
+.button1{
+  background-color: var(--ion-color-verdefosfo);
+}
+.button2{
+  background-color: var(--ion-color-fondogeneral);
+}
+
+.button1>p{
+  color: var(--ion-color-fondogeneral);
+}
+
+.button2>p{
+  color: var(--ion-color-verdefosfo);
+}

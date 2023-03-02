@@ -1,9 +1,26 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>registro</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-
+<div class="header">
+<ion-icon (click)="volver()" name="arrow-back-outline"></ion-icon>
+<div class="barra"></div>
+</div>
+<div class="mensaje">
+<ion-img src="../../../assets/logo.png"></ion-img>
+<div class="bocadillo">
+  <p>
+    ¿Qué nombre de usuario te gustaría tener? Recuerda que es posible que otro usuario ya tenga ese nombre.
+  </p>
+</div>
+</div>
+<div class="contenido">
+<input type="text" class="nombre_usuario" name="nombre_usuario" placeholder="Introduce un nombre de usuario">
+</div>
+<div class="botonera">
+  <button class="boton">CONTINUAR</button>
+</div>
 </ion-content>

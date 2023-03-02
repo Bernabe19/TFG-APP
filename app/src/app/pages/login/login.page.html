@@ -5,31 +5,31 @@
 </ion-header> -->
 
 <ion-content>
+  <div class="cabecera">
+    <ion-icon class="volver" (click)="volver()" name="close-outline"></ion-icon>
+    <ion-img src="../../../assets/logo.png"></ion-img>
+  </div>
 	<form>
-		<div class="input-group">
-			<ion-item>
-				<ion-input type="email" placeholder="Email"></ion-input>
-			</ion-item>
+    <div class="campo_usuario">
+      <ion-icon class="icon_field" id="icon_user" name="person-circle"></ion-icon>
+      <input type="text" placeholder="Nombre de Usuario" name="usuario" class="usuario">
+    </div>
 			<!-- <div *ngIf="(email.dirty || email.touched) && email.errors)" class="errors">
 				<span *ngIf="email.errors?.required">Email is required</span>
 				<span *ngIf="email.errors?.email">Email is invalid</span>
 			</div> -->
-			<ion-item>
-				<ion-input type="password" placeholder="Password"></ion-input>
-			</ion-item>
+      <div class="campo_password">
+        <ion-icon  class="icon_field" id="icon_lock" name="lock-closed"></ion-icon>
+        <input type="password" placeholder="Contraseña" name="password" class="password" id="password">
+        <ion-icon (click)="mostrarOcultarPassword('ocultar')"  class="icon_field" id="eye" name="eye"></ion-icon>
+        <ion-icon (click)="mostrarOcultarPassword('mostrar')" class="icon_field" id="no_eye" name="eye-off"></ion-icon>
+      </div>
 			<!-- <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
 				<span *ngIf="password.errors?.required">Password is required</span>
 				<span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
 			</div> -->
-		</div>
     <!-- [disabled]="!credentials.valid" -->
-		<ion-button type="button" expand="block" color="tertiary">
-			<ion-icon name="logo-google" slot="start"></ion-icon>
-			Sign in with Google
-		</ion-button>
-    <ion-button type="button" expand="block" color="tertiary">
-			<ion-icon name="logo-google" slot="start"></ion-icon>
-			Regístrate
-		</ion-button>
+		<button type="submit">INICIA SESIÓN</button>
 	</form>
+  <div class="forma"></div>
 </ion-content>

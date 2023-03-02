@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import '@ionic/core';
+import '@ionic/pwa-elements';
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+defineCustomElements(window);
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',

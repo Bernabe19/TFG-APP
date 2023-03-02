@@ -1,0 +1,84 @@
+.header{
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+}
+.mensaje{
+  margin-top: 5%;
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.botonera{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50%;
+  height: 6%;
+
+}
+ion-icon{
+  color: var(--ion-color-grisaux);
+  width: 50px;
+  height: 30px;
+}
+
+.barra{
+  width: 80%;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--ion-color-grisaux);
+}
+ion-img{
+  width: 25%;
+  height: auto;
+}
+.bocadillo{
+  width: 269px;
+  height: 120px;
+  background-color: var(--ion-color-contenedor);
+  border-radius: 20px;
+}
+.bocadillo>p{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  text-align: justify;
+  font-size: 100%;
+}
+button{
+  border-radius: 14px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fredoka One', cursive;
+  background-color: var(--ion-color-verdefosfo);
+  color: var(--ion-color-fondogeneral);
+}
+.contenido{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25%;
+  height: 5%;
+}
+.nombre_usuario{
+  background-color: var(--ion-color-grisaux);
+  border-radius: 10px;
+  height: 100%;
+  width: 80%;
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  text-align: center;
+}
+::placeholder{
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  font-size: 90%;
+}
+

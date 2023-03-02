@@ -1,6 +1,6 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -74,6 +74,27 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** verdefosfo **/
+  --ion-color-verdefosfo: #71FD09;
+  /** fondogeneral **/
+  --ion-color-fondogeneral: rgba(16, 26, 44, 0.91);
+  /** blancotexto **/
+  --ion-color-blancotexto: #ffffff;
+    /** grisaux **/
+  --ion-color-grisaux: #47546B;
+}
+.ion-color-verdefosfo {
+  --ion-color-base: var(--ion-color-verdefosfo);
+}
+.ion-color-fondogeneral {
+  --ion-color-base: var(--ion-color-fondogeneral);
+}
+.ion-color-blancotexto {
+  --ion-color-base: var(--ion-color-blancotexto);
+}
+.ion-color-grisaux {
+  --ion-color-base: var(--ion-color-grisaux);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -185,7 +206,8 @@
   }
 
   .ios ion-modal {
-    --ion-background-color: var(--ion-color-step-100);
+    // --ion-background-color: var(--ion-color-step-100);
+    --ion-background-color: var(--ion-color-verdefosfo)
     --ion-toolbar-background: var(--ion-color-step-150);
     --ion-toolbar-border-color: var(--ion-color-step-250);
   }
@@ -197,7 +219,8 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
+    // --ion-background-color: #121212;
+    --ion-background-color: var(--ion-color-fondogeneral);
     --ion-background-color-rgb: 18,18,18;
 
     --ion-text-color: #ffffff;
@@ -233,4 +256,16 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+/*Añadimos light theme*/
+@media (prefers-color-scheme: light) {
+  .md body {
+    --ion-background-color: var(--ion-color-fondogeneral);
+  }
+
+  .ios body {
+    --ion-background-color: var(--ion-color-fondogeneral);
+  }
+
 }
