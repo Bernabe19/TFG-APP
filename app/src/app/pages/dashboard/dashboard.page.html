@@ -5,37 +5,43 @@
 </ion-header> -->
 <ion-content>
   <div class="cabecera">
-    <ion-text class="nombre-usuario"> Hola NombreUsuario </ion-text>
-    <ion-img class="icon-usuario" src="./../../../assets/icon/favicon.png"></ion-img>
+    <ion-icon (click)="mostrarAlerta()" class="item-header" name="arrow-back-outline"></ion-icon>
+    <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+    <h1 id="click-trigger">i</h1>
+      <ion-popover trigger="click-trigger" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding"><p>Esta es la pantalla principal, desde aquí podrás acceder a todas las funcionalidades de foodfollow.</p></ion-content>
+        </ng-template>
+      </ion-popover>
   </div>
   <div class="texto-intro">
-    <ion-text> Descubre NombreApp</ion-text>
+    <h5>Bienvenido {{nombreUsuario}}</h5>
   </div>
   <div class="tarjetas">
    <div class="tarjeta1 tarjeta-opcion">
-    <ion-icon></ion-icon>
-    <p>Captura un plato</p>
+    <p>Captura</p>
+    <ion-icon class="icon-option" name="camera-outline"></ion-icon>
    </div>
    <div class="tarjeta2 tarjeta-opcion">
-    <ion-icon></ion-icon>
-    <p>Captura un plato</p>
+    <p>Planes</p>
+    <ion-icon class="icon-option" name="map-outline"></ion-icon>
    </div>
    <div class="tarjeta3 tarjeta-opcion">
-    <ion-icon></ion-icon>
-    <p>Captura un plato</p>
+    <p>Trofeos</p>
+    <ion-icon class="icon-option" name="trophy-outline"></ion-icon>
    </div>
     <div class="tarjeta4 tarjeta-opcion">
-      <ion-icon></ion-icon>
-      <p>Captura un plato</p>
+      <p>Informe</p>
+      <ion-icon class="icon-option" name="book-outline"></ion-icon>
      </div>
      <div class="tarjeta5 tarjeta-opcion">
-      <ion-icon></ion-icon>
-      <p>Captura un plato</p>
+      <p>Estadísticas</p>
+      <ion-icon class="icon-option" name="bar-chart-outline"></ion-icon>
      </div>
      <div class="tarjeta6 tarjeta-opcion">
-      <ion-icon></ion-icon>
-      <p>Captura un plato</p>
+      <p>Ajustes</p>
+      <ion-icon class="icon-option" name="settings-outline"></ion-icon>
      </div>
   </div>
-
+  <!-- <img id="img" src="../../../assets/xd.jpg"> -->
 </ion-content>

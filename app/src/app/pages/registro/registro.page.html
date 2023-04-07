@@ -6,21 +6,38 @@
 
 <ion-content>
 <div class="header">
-<ion-icon (click)="volver()" name="arrow-back-outline"></ion-icon>
-<div class="barra"></div>
+<ion-icon (click)="volver()" name="arrow-back-outline" id="flecha_volver"></ion-icon>
+<ion-progress-bar [value]="progreso" class="barra"></ion-progress-bar>
 </div>
 <div class="mensaje">
 <ion-img src="../../../assets/logo.png"></ion-img>
 <div class="bocadillo">
   <p>
-    ¿Qué nombre de usuario te gustaría tener? Recuerda que es posible que otro usuario ya tenga ese nombre.
+    {{this.texto}}
   </p>
 </div>
 </div>
-<div class="contenido">
-<input type="text" class="nombre_usuario" name="nombre_usuario" placeholder="Introduce un nombre de usuario">
+<form class="contenido" [formGroup]="registerForm">
+<input *ngIf="contador === 0" type="text" class="nombre_usuario" id="nombre_usuario" name="nombre_usuario" placeholder="Introduce un nombre de usuario" formControlName="nombre_usuario" (input)="usuarioBoton()">
+<input *ngIf="contador === 1" type="password" class="nombre_usuario" id="password" name="password" placeholder="Introduce una contraseña válida" formControlName="password" (input)="usuarioBoton()">
+<input type="number" style="display: none;" formControlName="objetivo" name="objetivo" id="objetivo" value={{objetivo}}>
+<div *ngIf="contador === 2" class="contenedor_objetivo">
+<div *ngIf="contador === 2" class="objetivo_box" (click)="cambiarObjetivo(0)"><ion-icon name="trending-down-outline"></ion-icon><p>Perder peso</p><ion-icon class="icon_flip" name="trending-down-outline"></ion-icon></div>
+<div *ngIf="contador === 2" class="objetivo_box" (click)="cambiarObjetivo(1)"><ion-icon name="trending-up-outline"></ion-icon><p>Ganar peso</p><ion-icon class="icon_flip" name="trending-up-outline"></ion-icon></div>
+<div *ngIf="contador === 2" class="objetivo_box" (click)="cambiarObjetivo(2)"><ion-icon name="barbell-outline"></ion-icon><p>Ganar masa muscular</p><ion-icon name="barbell-outline"></ion-icon></div>
+<div *ngIf="contador === 2" class="objetivo_box" (click)="cambiarObjetivo(3)"><ion-icon name="help-outline"></ion-icon><p>Otro</p><ion-icon name="help-outline"></ion-icon></div>
 </div>
+<input type="number" style="display: none;" formControlName="estado_animico" name="estado_animico" id="estado_animico" value={{estado}}>
+<div *ngIf="contador === 3" class="contenedor_caras">
+  <ion-icon class="caras" (click)="cambiarEstado(0)" name="happy" *ngIf="contador === 3"></ion-icon>
+  <ion-icon class="caras" (click)="cambiarEstado(1)" name="sad" *ngIf="contador === 3"></ion-icon>
+</div>
+<div class="contenedor_peso" *ngIf="contador === 4">
+  <ion-range id="peso" class="peso" *ngIf="contador === 4" name="peso" (ionChange)="cambiarPeso($event)" formControlName="peso" [value]="70" [min]="35" [max]="140"></ion-range>
+  <p *ngIf="contador === 4" class="p_peso">{{peso}} Kg</p>
+</div>
+</form>
 <div class="botonera">
-  <button class="boton">CONTINUAR</button>
+  <button class="boton" id="boton" (click)="siguientePaso()" [disabled]="true">{{this.textoBoton}}</button>
 </div>
 </ion-content>

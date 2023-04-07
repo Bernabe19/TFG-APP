@@ -1,14 +1,13 @@
 ion-content{
   --padding-top: 8%;
 }
-.icon-usuario{
-  width: 50px;
+.icon-app{
+  width: 18%;
   height: auto;
 }
 .cabecera{
   display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
+  justify-content: space-between;
 }
 .nombre-usuario{
   margin-right: 35px;
@@ -17,17 +16,71 @@ ion-content{
 .texto-intro{
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 5%;
   padding: auto;
 }
 .tarjetas{
   display: flex;
   flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  height: 70%;
 }
 //Modificar width y padding para obtener un mejor resultado en movil
 .tarjeta-opcion{
-  flex: 1;
-  width: 50%;
-  padding: 30px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 30%;
+  border-radius: 20px;
+  background-color: var(--ion-color-grisaux);
+  text-align: center;
+  cursor: pointer;
+  border: 3px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+p{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+h1{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  cursor: pointer;
+  width: 10%;
+  margin-top: 15%;
+}
+h5{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+.item-header{
+  color: var(--ion-color-blancotexto);
+  width: 12%;
+  height: auto;
+  margin-top: 12%;
+  margin-left: 5%;
+  cursor: pointer;
+}
+.ion-padding{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  text-align: justify;
+  text-justify: distribute;
+}
+ion-img{
+  margin-right: 3%;
+}
+.icon-option{
+  color: var(--ion-color-blancotexto);
+  width: 100%;
+  height: 30%;
+}
+
+.alert{
+  background-color: red ;
+}
+.alert .alert-wrapper {
+  background: #e5e5e5;
 }

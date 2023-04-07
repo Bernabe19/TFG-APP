@@ -24,3 +24,61 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-loading.custom-loading {
+  --background: var(--ion-color-grisaux);
+  opacity: 0.9;
+  --spinner-color: var(--ion-color-verdefosfo);
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-verdefosfo);
+}
+
+ion-alert.custom-alert {
+  --backdrop-opacity: 0.2;
+  --background: var(--ion-color-fondogeneral);
+}
+
+.custom-alert .alert-button-group {
+  display: flex;
+  justify-content: space-around;
+}
+.custom-alert .alert-title{
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+
+button.alert-button.alert-button-confirm {
+  background-color: var(--ion-color-grisaux);
+  color: var(--ion-color-verdefosfo);
+  font-family: 'Fredoka One', cursive;
+}
+
+.md button.alert-button.alert-button-confirm {
+  border-radius: 4px;
+}
+
+button.alert-button.alert-button-cancel {
+  background-color: var(--ion-color-grisaux);
+  color: var(--ion-color-verdefosfo);
+  font-family: 'Fredoka One', cursive;
+}
+
+.md button.alert-button.alert-button-cancel {
+  border-radius: 4px;
+}
+
+.ios .custom-alert button.alert-button {
+  border: 0.55px solid rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.2)
+}
+
+.ios button.alert-button.alert-button-cancel {
+  border-right: 0;
+  border-bottom-left-radius: 13px;
+  border-top-left-radius: 13px;
+}
+
+.ios button.alert-button.alert-button-confirm {
+  border-bottom-right-radius: 13px;
+  border-top-right-radius: 13px;
+}

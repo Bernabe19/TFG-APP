@@ -83,6 +83,7 @@ button{
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 100%;
   margin-top: 12%;
+  display: none;
 }
 ::placeholder{
   color: var(--ion-color-blancotexto);
@@ -114,14 +115,14 @@ button{
 #eye{
   display: none;
 }
-#no_eye{
-
+.eye{
+  cursor: pointer;
 }
-// .errors {
-// 	font-size: small;
-// 	color: #fff;
-// 	background: var(--ion-color-danger);
-// 	padding-left: 15px;
-// 	padding-top: 5px;
-// 	padding-bottom: 5px;
-// }
+#aviso{
+  font-size: 80%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: red;
+  display: none;
+}

@@ -9,27 +9,19 @@
     <ion-icon class="volver" (click)="volver()" name="close-outline"></ion-icon>
     <ion-img src="../../../assets/logo.png"></ion-img>
   </div>
-	<form>
+	<form  [formGroup]="loginForm" (ngSubmit)="login()">
     <div class="campo_usuario">
       <ion-icon class="icon_field" id="icon_user" name="person-circle"></ion-icon>
-      <input type="text" placeholder="Nombre de Usuario" name="usuario" class="usuario">
+      <input (input)="mostrarLogin()" type="text" placeholder="Nombre de Usuario" name="nombre" class="usuario" id="usuario" formControlName="nombre">
     </div>
-			<!-- <div *ngIf="(email.dirty || email.touched) && email.errors)" class="errors">
-				<span *ngIf="email.errors?.required">Email is required</span>
-				<span *ngIf="email.errors?.email">Email is invalid</span>
-			</div> -->
       <div class="campo_password">
-        <ion-icon  class="icon_field" id="icon_lock" name="lock-closed"></ion-icon>
-        <input type="password" placeholder="Contraseña" name="password" class="password" id="password">
-        <ion-icon (click)="mostrarOcultarPassword('ocultar')"  class="icon_field" id="eye" name="eye"></ion-icon>
-        <ion-icon (click)="mostrarOcultarPassword('mostrar')" class="icon_field" id="no_eye" name="eye-off"></ion-icon>
+        <ion-icon class="icon_field" id="icon_lock" name="lock-closed"></ion-icon>
+        <input (input)="mostrarLogin()" type="password" placeholder="Contraseña" name="password" class="password" id="password" formControlName="password">
+        <ion-icon (click)="mostrarOcultarPassword('ocultar')"  class="icon_field eye" id="eye" name="eye"></ion-icon>
+        <ion-icon  (click)="mostrarOcultarPassword('mostrar')" class="icon_field eye" id="no_eye" name="eye-off"></ion-icon>
       </div>
-			<!-- <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
-				<span *ngIf="password.errors?.required">Password is required</span>
-				<span *ngIf="password.errors?.minlength">Password needs to be 6 characters</span>
-			</div> -->
-    <!-- [disabled]="!credentials.valid" -->
-		<button type="submit">INICIA SESIÓN</button>
+      <p class="aviso" id="aviso">Nombre de usuario o contraseña incorrectos</p>
+		<button type="submit" id="enviar">INICIA SESIÓN</button>
 	</form>
   <div class="forma"></div>
 </ion-content>

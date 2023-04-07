@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50%;
+  margin-top: 10%;
   height: 6%;
 
 }
@@ -44,7 +44,7 @@ ion-img{
 .bocadillo>p{
   font-family: 'Fredoka One', cursive;
   color: var(--ion-color-blancotexto);
-  text-align: justify;
+  text-align: center;
   font-size: 100%;
 }
 button{
@@ -60,17 +60,22 @@ button{
   background-color: var(--ion-color-verdefosfo);
   color: var(--ion-color-fondogeneral);
 }
+button:disabled{
+  background-color: var(--ion-color-fondogeneral);
+  color:var(--ion-color-verdefosfo);
+  border: 0;
+}
 .contenido{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25%;
-  height: 5%;
+  height: 38%;
 }
 .nombre_usuario{
   background-color: var(--ion-color-grisaux);
   border-radius: 10px;
-  height: 100%;
+  height: 15%;
   width: 80%;
   font-family: 'Fredoka One', cursive;
   color: var(--ion-color-blancotexto);
@@ -81,4 +86,87 @@ button{
   font-family: 'Fredoka One', cursive;
   font-size: 90%;
 }
+ion-progress-bar{
+  width: 80%;
+  height: 20px;
+  border-radius: 20px;
+  --background: var(--ion-color-grisaux);
+  --progress-background: var(--ion-color-verdefosfo);
+}
+
+.objetivo_box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  background-color: var(--ion-color-grisaux);
+  border-radius: 10px;
+  transition: .3s;
+}
+.objetivo_box:hover{
+  cursor: pointer;
+}
+.objetivo_box>p{
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+}
+.objetivo_box>ion-icon{
+  color: var(--ion-color-verdefosfo);
+  font-size: 2%;
+}
+.icon_flip{
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.contenedor_objetivo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.contenedor_objetivo:hover > :not(:hover){
+  opacity: .4;
+}
+.caras{
+  color: var(--ion-color-grisaux);
+  transform: scale(3);
+}
+.caras:hover{
+  cursor: pointer;
+  color: var(--ion-color-verdefosfo);
+}
+
+.contenedor_caras{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+.p_peso{
+  color: var(--ion-color-blancotexto);
+  font-family: 'Fredoka One', cursive;
+  font-size: 250%;
+  align-self: center;
+}
+.contenedor_peso{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  // align-items: center;
+  justify-content: center;
+}
+.peso{
+  --bar-height: 65%;
+  --bar-border-radius: 15px;
+  --bar-background: var(--ion-color-grisaux);
+  --bar-background-active: var(--ion-color-verdefosfo);
+}
+ion-range{
+  --knob-size: 30px;
+}
+
 
