@@ -1,0 +1,50 @@
+<ion-content class="content_padre" scrollEvents="true" scrollY="false">
+    <div class="cabecera">
+      <ion-icon (click)="redirigirDashboard()" class="item-header" name="arrow-back-outline"></ion-icon>
+      <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+      <h1 id="click-trigger-informe">i</h1>
+        <ion-popover trigger="click-trigger-informe" triggerAction="click">
+          <ng-template>
+            <ion-content class="ion-padding"><p>Esta es la pantalla de informe, en ella podrás ver todos los platos que has registrado.</p></ion-content>
+          </ng-template>
+        </ion-popover>
+    </div>
+    <div class="div_filtros">
+      <ion-menu-button class="filtros" id="main-content"><h5>Filtros</h5></ion-menu-button>
+    </div>
+
+  <ion-content class="platos" scrollY="true">
+    <div class="plato" *ngFor="let plato of platos" (click)=accederPlato(plato.uid) id={{plato.uid}}>
+        <img class="img_plato" src={{plato.imagen.secure_url}} crossorigin="anonymous">
+        <h5>{{plato.nombre}}</h5>
+        <h5 class="fecha">{{convertirFecha(plato.fecha)}}</h5>
+    </div>
+  </ion-content>
+  <ion-menu contentId="main-content" type="overlay">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="ion-text-center">Filtros de búsqueda</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-title class="titulo_fecha titulo">Fecha</ion-title>
+      <ion-segment (ionChange)="cambiarOrdenFecha($event)" class="fecha_segment" value="desc" color="success">
+        <ion-segment-button  value="desc" >
+          <ion-label>Descendente</ion-label>
+        </ion-segment-button>
+        <ion-segment-button  value="asc">
+          <ion-label>Ascendente</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      <ion-title class="titulo_plan titulo">Plan</ion-title>
+      <div class="planes">
+        <div (click)="planSeleccionado(0)" class="perder_peso plan"></div>
+        <div (click)="planSeleccionado(1)" class="ganar_peso plan"></div>
+        <div (click)="planSeleccionado(2)" class="ganar_musculo plan"></div>
+      </div>
+      <ion-menu-toggle class="toggle">
+        <ion-button class="buscar" (click)="busqueda()"><h5>Buscar</h5></ion-button>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+</ion-content>

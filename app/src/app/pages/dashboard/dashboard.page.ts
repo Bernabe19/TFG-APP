@@ -20,6 +20,7 @@ export class DashboardPage implements OnInit {
       'apple_pie','caesar_salad','cheesecake','chicken_curry','churros','donuts','escargots','fish_and_chips','french_fries','greek_salad','hamburguer','ice_cream','macarons','omelette','paella','pizza','ramen','spring_rolls','sushi','tacos'
   ];
   public nombreUsuario : string = "";
+  public objetivo : number = -1;
   constructor(
     private httpClient: HttpClient,
     private usuarioService: UsuarioService,
@@ -28,13 +29,13 @@ export class DashboardPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.loadModel();
     this.cargarUsuario();
   }
   cargarUsuario(){
     this.usuarioService.obtenerInfoToken().subscribe({
        next: async(res:any) =>{
         this.nombreUsuario = await res["nombreUsuario"] || "";
+        this.objetivo = await res["objetivo"] || "";
       },
       error: (error) =>{
         console.log(error);
@@ -51,7 +52,6 @@ export class DashboardPage implements OnInit {
           role: 'cancel',
           cssClass: 'alert-button-cancel',
           handler: () => {
-            console.log("Operación cancelada");
           },
         },
         {
@@ -67,30 +67,38 @@ export class DashboardPage implements OnInit {
     });
     await alert.present();
   }
+  async alertaPlan(){
+    const alert = await this.alertController.create({
+      header: 'Tienes que estar suscrito a un plan para poder capturar un plato',
+      cssClass: 'custom-alert',
+      buttons: [
+        {
+          text: 'Aceptar',
+          role: 'confirm',
+          cssClass: 'alert-button-confirm',
+          handler: () => {
+          },
+        },
+      ],
+    });
+    await alert.present();
+  }
   borrarToken(){
     if(localStorage.getItem('x-token')){
       localStorage.removeItem('x-token');
     }
   }
-  // async loadModel(){
-  //   this.model = await tf.loadLayersModel("http://localhost:8014/modelo_vgg16/model.json");
-  //   this.predict();
-  // }
-  // async predict() {
-  //   // imageData = 'https://www.shutterstock.com/image-photo/background-healthy-food-fresh-fruits-260nw-1260483340.jpg';
-  //   let im = document.getElementById('img') as HTMLImageElement;
-  //   const pred = await tf.tidy(() => {
-  //     // Conversion de la iamgen a pixeles con formato [224,224,3]
-  //     let img = tf.browser.fromPixels(im).resizeBilinear([224,224])
-  //     // Cambiar forma conforme a la definida en la entrada del modelo [1,224,224,3] Tensor4D
-  //     img = img.reshape([1,224,224,3]);
-  //     img = tf.cast(img, 'float32');
-  //     // Make and format the predications
-  //     const output = this.model.predict(img) as any;
-  //     // Save predictions on the component
-  //     this.predictions = Array.from(output.dataSync());
-  //     //Obtenemos el valor maximo y mostranmos prediccion
-  //     console.log('Resultado: ' + this.labels_20[this.predictions.indexOf(Math.max(...this.predictions))] + "Porcentaje " + Math.max(...this.predictions) * 100 ) ;
-  //   });
-  // }
+  accederFuncionalidad(opcion:string){
+    if(opcion === 'captura-plato'){
+      if(![0,1,2].includes(this.objetivo)){
+        console.log(this.objetivo);
+        this.alertaPlan();
+      }else{
+        this.router.navigateByUrl(opcion);
+      }
+    }else{
+      this.router.navigateByUrl(opcion);
+    }
+  }
+
 }

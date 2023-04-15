@@ -13,10 +13,15 @@ export class AppComponent {
   constructor(
     public router: Router,
   ) {
-      this.llamarSplash();
+      this.redirigir();
     }
 
-    llamarSplash(){
-      this.router.navigateByUrl('splash');
+    redirigir(){
+      if(localStorage.getItem('x-token') !== null){
+        this.router.navigateByUrl('dashboard');
+      }else{
+        this.router.navigateByUrl('inicio');
+      }
     }
+
 }

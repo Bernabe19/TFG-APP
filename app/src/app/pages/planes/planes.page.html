@@ -1,0 +1,26 @@
+<ion-content>
+  <div class="cabecera">
+    <ion-icon (click)="redirigirDashboard()" class="item-header" name="arrow-back-outline"></ion-icon>
+    <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+    <h1 id="click-trigger-plan">i</h1>
+      <ion-popover trigger="click-trigger-plan" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding"><p>Esta es la pantalla de planes, en ella podrás seleccionar cualquier plan disponible.</p></ion-content>
+        </ng-template>
+      </ion-popover>
+  </div>
+  <div class="planes">
+    <div (click)="cambiarPlan(0)" class="plan plan1">
+      <h3>Perder peso</h3>
+      <p>Obtendrás trofeos al consumir platos con pocas calorías.</p>
+    </div>
+    <div (click)="cambiarPlan(1)" class="plan plan2">
+      <h3>Ganar peso</h3>
+      <p>Obtendrás trofeos al consumir platos con muchas calorías.</p>
+    </div>
+    <div (click)="cambiarPlan(2)" class="plan plan3">
+      <h3>Ganar músculo</h3>
+      <p>Obtendrás trofeos al consumir platos con muchas proteínas.</p>
+    </div>
+  </div>
+</ion-content>

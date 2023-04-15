@@ -83,6 +83,10 @@
   --ion-color-blancotexto: #ffffff;
     /** grisaux **/
   --ion-color-grisaux: #47546B;
+    /* rojoburguer */
+  --ion-color-rojoburguer: #FD0909;
+   /* naranjaburguer */
+   --ion-color-naranjaburguer: #EC5C1E;
 }
 .ion-color-verdefosfo {
   --ion-color-base: var(--ion-color-verdefosfo);
@@ -95,6 +99,12 @@
 }
 .ion-color-grisaux {
   --ion-color-base: var(--ion-color-grisaux);
+}
+.ion-color-rojoburguer {
+  --ion-color-base: var(--ion-color-rojoburguer);
+}
+.ion-color-naranjaburguer {
+  --ion-color-base: var(--ion-color-naranjaburguer);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -250,7 +260,7 @@
 
     --ion-item-background: #1e1e1e;
 
-    --ion-toolbar-background: #1f1f1f;
+    --ion-toolbar-background: var(--ion-color-grisaux);
 
     --ion-tab-bar-background: #1f1f1f;
 

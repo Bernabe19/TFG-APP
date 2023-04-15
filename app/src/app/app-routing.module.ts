@@ -35,7 +35,24 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },  {
+    path: 'ajustes',
+    loadChildren: () => import('./pages/ajustes/ajustes.module').then( m => m.AjustesPageModule)
   },
+  {
+    path: 'planes',
+    loadChildren: () => import('./pages/planes/planes.module').then( m => m.PlanesPageModule)
+  },
+  {
+    path: 'info-plato',
+    loadChildren: () => import('./pages/info-plato/info-plato.module').then( m => m.InfoPlatoPageModule)
+  },
+  {
+    path: 'informe',
+    loadChildren: () => import('./pages/informe/informe.module').then( m => m.InformePageModule)
+  },
+
+
 
 ];
 

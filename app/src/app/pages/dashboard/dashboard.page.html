@@ -1,8 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
-  </ion-toolbar>
-</ion-header> -->
 <ion-content>
   <div class="cabecera">
     <ion-icon (click)="mostrarAlerta()" class="item-header" name="arrow-back-outline"></ion-icon>
@@ -18,30 +13,29 @@
     <h5>Bienvenido {{nombreUsuario}}</h5>
   </div>
   <div class="tarjetas">
-   <div class="tarjeta1 tarjeta-opcion">
+   <div (click)="accederFuncionalidad('captura-plato')" class="tarjeta1 tarjeta-opcion">
     <p>Captura</p>
     <ion-icon class="icon-option" name="camera-outline"></ion-icon>
    </div>
-   <div class="tarjeta2 tarjeta-opcion">
+   <div (click)="accederFuncionalidad('planes')" class="tarjeta2 tarjeta-opcion">
     <p>Planes</p>
     <ion-icon class="icon-option" name="map-outline"></ion-icon>
    </div>
-   <div class="tarjeta3 tarjeta-opcion">
+   <div (click)="accederFuncionalidad('trofeos')" class="tarjeta3 tarjeta-opcion">
     <p>Trofeos</p>
     <ion-icon class="icon-option" name="trophy-outline"></ion-icon>
    </div>
-    <div class="tarjeta4 tarjeta-opcion">
+    <div (click)="accederFuncionalidad('informe')" class="tarjeta4 tarjeta-opcion">
       <p>Informe</p>
       <ion-icon class="icon-option" name="book-outline"></ion-icon>
      </div>
-     <div class="tarjeta5 tarjeta-opcion">
+     <div (click)="accederFuncionalidad('estadisticas')" class="tarjeta5 tarjeta-opcion">
       <p>Estadísticas</p>
       <ion-icon class="icon-option" name="bar-chart-outline"></ion-icon>
      </div>
-     <div class="tarjeta6 tarjeta-opcion">
+     <div (click)="accederFuncionalidad('ajustes')" class="tarjeta6 tarjeta-opcion">
       <p>Ajustes</p>
       <ion-icon class="icon-option" name="settings-outline"></ion-icon>
      </div>
   </div>
-  <!-- <img id="img" src="../../../assets/xd.jpg"> -->
 </ion-content>

@@ -1,0 +1,163 @@
+.content_padre{
+  --padding-top: 8%;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: transparent transparent; /* para Firefox */
+  scrollbar-width: none; /* para Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.icon-app{
+  width: 18%;
+  height: auto;
+}
+.cabecera{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+p{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+h1{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  cursor: pointer;
+  width: 10%;
+  margin-top: 15%;
+}
+.item-header{
+  color: var(--ion-color-blancotexto);
+  width: 12%;
+  height: auto;
+  margin-top: 12%;
+  margin-left: 5%;
+  cursor: pointer;
+}
+.ion-padding{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  text-align: center;
+  text-justify: inherit;
+}
+ion-img{
+  margin-right: 3%;
+}
+.div_filtros{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+
+}
+.filtros{
+  width: 40%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+  border-radius: 6px;
+  background-color: var(--ion-color-grisaux);
+}
+h5{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+.filtros:active {
+  background-color: var(--ion-color-verdefosfo);
+  transform: translateY(4px);
+}
+.filtros:hover{
+  background-color: var(--ion-color-grisaux);
+}
+.platos{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 20%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plato{
+  display: inline-flex;
+  align-content: space-around;
+  justify-content: space-between;
+  background-color: var(--ion-color-grisaux);
+  flex-wrap: wrap;
+  margin-top: 5%;
+  width: 90%;
+  border-radius: 10px;
+  height: 80px;
+  cursor: pointer;
+  margin-left: 5%;
+}
+.img_plato{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 3%;
+}
+.fecha{
+  margin-right: 3%;
+}
+
+ion-toolbar{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+.titulo{
+  margin-top: 5%;
+  text-decoration: underline;
+}
+.titulo_plan{
+  margin-top: 15%;
+}
+ion-label{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+.buscar{
+  width: 80%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  --background: var(--ion-color-verdefosfo);
+  margin-top: 40%;
+}
+.toggle{
+  display: flex;
+  justify-content: center;
+}
+.planes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+}
+.plan{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.perder_peso{
+  background-color: var(--ion-color-verdefosfo);
+}
+.ganar_peso{
+  background-color: var(--ion-color-naranjaburguer);
+}
+.ganar_musculo{
+  background-color: var(--ion-color-rojoburguer);
+}
+.fecha_segment{
+  margin-top: 5%;
+}

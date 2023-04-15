@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
+  "type": "module",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -29,7 +30,8 @@
     "@capacitor/status-bar": "4.1.1",
     "@ionic/angular": "^6.1.9",
     "@ionic/pwa-elements": "^3.1.1",
-    "@tensorflow/tfjs": "^4.2.0",
+    "@tensorflow/tfjs": "^4.4.0",
+    "chart.js": "^4.2.1",
     "http-server": "^14.1.1",
     "ionicons": "^6.0.3",
     "rxjs": "~7.5.0",

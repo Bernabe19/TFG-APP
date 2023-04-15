@@ -1,0 +1,38 @@
+
+<ion-content>
+    <div class="cabecera">
+      <ion-icon (click)="redirigir()" class="item-header" name="arrow-back-outline"></ion-icon>
+      <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+      <h1 id="click-trigger-ajustes">i</h1>
+        <ion-popover trigger="click-trigger-ajustes" triggerAction="click">
+          <ng-template>
+            <ion-content class="ion-padding"><p>Esta es la pantalla de ajustes, desde aquí podrás configurar tu usuario.</p></ion-content>
+          </ng-template>
+        </ion-popover>
+    </div>
+    <form class="contenido" [formGroup]="actualizarForm">
+      <h4>Estado anímico</h4>
+      <div class="caras">
+        <input type="number" style="display: none;" formControlName="estado_animico" name="estado_animico" id="estado_animico" value={{estado}}>
+        <ion-icon (click)="cambiarEstado(0)" class="cara" name="happy"></ion-icon>
+        <ion-icon (click)="cambiarEstado(1)" class="cara" name="sad"></ion-icon>
+      </div>
+      <h4 class="h4_nombre">Nombre de usuario</h4>
+      <div class="conjunto_usuario">
+        <div class="usuario_field">
+          <input type="text" [readonly]="edit_nombre" value={{nombreUsuario}} name="nombre_usuario" class="usuario" formControlName="nombre_usuario">
+        </div>
+        <ion-icon (click)="cambiarLectura(0)" class="edit_icon" name="create-outline"></ion-icon>
+      </div>
+
+      <h4 class="h4_peso">Peso</h4>
+      <div class="conjunto_peso">
+      <div class="peso_field">
+        <input type="number" [readonly]="edit_peso" value={{peso}} name="peso" class="peso" formControlName="peso">
+      </div>
+      <ion-icon (click)="cambiarLectura(1)" class="edit_icon" name="create-outline"></ion-icon>
+      </div>
+      <button class="cambiar_password boton" (click)="mostrarAlerta()"><p>Cambiar contraseña</p></button>
+      <button class="actualizar_usuario boton"(click)="actualizarUsuario()"><p>Actualizar Usuario</p></button>
+    </form>
+</ion-content>

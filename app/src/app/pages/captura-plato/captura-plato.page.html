@@ -1,16 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>captura-plato</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-  <div>
-
+  <div class="cabecera">
+    <ion-icon (click)="redirigirDashboard()" class="item-header" name="arrow-back-outline"></ion-icon>
+    <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+    <h1 id="click-trigger-captura">i</h1>
+      <ion-popover trigger="click-trigger-captura" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding"><p>Esta es la pantalla de captura, en ella podrás capturar y guardar tus platos </p></ion-content>
+        </ng-template>
+      </ion-popover>
   </div>
-  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-    <ion-fab-button (click)="addNewToGallery()">
-      <ion-icon name="camera"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+  <div class="captura" (click)="addNewToGallery()">
+    <div class="captura_inner">
+      <ion-icon class="camera" name="camera"></ion-icon>
+    </div>
+  </div>
 </ion-content>
+  <img id="img" style="display:none" src="https://res.cloudinary.com/dvv34yqao/image/upload/v1681397899/platos/vzgggjdatvc0ooeaevrb.png" crossorigin="anonymus">

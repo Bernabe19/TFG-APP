@@ -26,7 +26,6 @@ ion-content{
   justify-content: space-around;
   height: 70%;
 }
-//Modificar width y padding para obtener un mejor resultado en movil
 .tarjeta-opcion{
   display: flex;
   flex-direction: column;
@@ -66,8 +65,8 @@ h5{
 .ion-padding{
   font-family: 'Fredoka One', cursive;
   color: var(--ion-color-blancotexto);
-  text-align: justify;
-  text-justify: distribute;
+  text-align: center;
+  text-justify: inherit;
 }
 ion-img{
   margin-right: 3%;
@@ -76,11 +75,4 @@ ion-img{
   color: var(--ion-color-blancotexto);
   width: 100%;
   height: 30%;
-}
-
-.alert{
-  background-color: red ;
-}
-.alert .alert-wrapper {
-  background: #e5e5e5;
 }

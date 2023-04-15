@@ -1,0 +1,125 @@
+ion-content{
+  --padding-top: 8%;
+}
+.icon-app{
+  width: 18%;
+  height: auto;
+}
+.cabecera{
+  display: flex;
+  justify-content: space-between;
+}
+p{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+h1{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  cursor: pointer;
+  width: 10%;
+  margin-top: 15%;
+}
+.item-header{
+  color: var(--ion-color-blancotexto);
+  width: 12%;
+  height: auto;
+  margin-top: 12%;
+  margin-left: 5%;
+  cursor: pointer;
+}
+.ion-padding{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+  text-align: center;
+  text-justify: inherit;
+}
+ion-img{
+  margin-right: 3%;
+}
+.contenido{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25%;
+  margin-top: 5%;
+}
+.plato_img{
+  height: 80%;
+  width: 50%;
+  border-radius: 20px;
+}
+h3{
+  font-family: 'Fredoka One', cursive;
+  color: var(--ion-color-blancotexto);
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  margin-top: 2%;
+}
+#canvas{
+  width: 50%;
+  height: 50%;
+}
+.info{
+  height: 20%;
+  margin-top: 5%;
+}
+.fuente{
+  margin-left: 17%;
+  height: 22%;
+}
+.bola{
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+.nombre{
+display: inline-block;
+  margin-left: 5%;
+}
+.valor{
+display: inline-block;
+}
+.valor1{
+  margin-left: 27.5%;
+}
+.valor2{
+  margin-left: 13.2%;
+}
+.valor3{
+  margin-left: 39%;
+
+}
+.valor4{
+  margin-left: 35%;
+}
+
+.bola1{
+  background-image: conic-gradient(var(--ion-color-verdefosfo) 33%, var(--ion-color-naranjaburguer) 33%, var(--ion-color-rojoburguer));
+}
+.bola2{
+  background-color: var(--ion-color-verdefosfo);
+
+}
+.bola3{
+  background-color: var(--ion-color-naranjaburguer);
+}
+.bola4{
+  background-color: var(--ion-color-rojoburguer);
+}
+.grasas{
+  margin-right: 15%;
+}
+.proteinas{
+  margin-right: 20%;
+}

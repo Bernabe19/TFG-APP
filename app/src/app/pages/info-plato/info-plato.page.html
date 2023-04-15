@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="cabecera">
+    <ion-icon (click)="redirigirDashboard()" class="item-header" name="arrow-back-outline"></ion-icon>
+    <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+    <h1 id="click-trigger-plato">i</h1>
+      <ion-popover trigger="click-trigger-plato" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding"><p>Esta es la pantalla de plato, en ella podrás ver la información nutricional del plato que capturaste.</p></ion-content>
+        </ng-template>
+      </ion-popover>
+  </div>
+  <div class="contenido">
+    <img src={{src}} class="plato_img" crossorigin="anonymous">
+    <h3>{{nombre}}</h3>
+  </div>
+  <div class="chart">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="info">
+    <div class="fuente calorias">
+      <div class="bola bola1"></div>
+      <p class="nombre">Calorias</p>
+      <p class="valor1 valor">{{calorias}}kcal</p>
+    </div>
+    <div class="fuente carbohidratos">
+      <div class="bola bola2"></div>
+      <p class="nombre">Carbohidratos</p>
+      <p class="valor2 valor">{{carbohidratos}}g</p>
+    </div>
+    <div class="fuente grasas">
+      <div class="bola bola3"></div>
+      <p class="nombre">Grasas</p>
+      <p class="valor3 valor">{{grasas}}g</p>
+    </div>
+    <div class="fuente proteinas">
+      <div class="bola bola4"></div>
+      <p class="nombre">Proteinas</p>
+      <p class="valor4 valor">{{proteinas}}g</p>
+    </div>
+  </div>
+</ion-content>
+
