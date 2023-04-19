@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as tf from '@tensorflow/tfjs';
-import data from './../../../assets/modelos/model_prueba/model.json';
-import { HttpClient } from '@angular/common/http';
 import { UsuarioService } from 'src/app/services/usuario.service';
-import { Observable } from 'rxjs';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
@@ -13,16 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  public model:any;
-  public predictions:any;
-  public imagen:any;
-  public labels_20 = [
-      'apple_pie','caesar_salad','cheesecake','chicken_curry','churros','donuts','escargots','fish_and_chips','french_fries','greek_salad','hamburguer','ice_cream','macarons','omelette','paella','pizza','ramen','spring_rolls','sushi','tacos'
-  ];
-  public nombreUsuario : string = "";
+  public nombreUsuario : string = "an";
   public objetivo : number = -1;
   constructor(
-    private httpClient: HttpClient,
     private usuarioService: UsuarioService,
     private alertController: AlertController,
     private router: Router,
@@ -33,9 +22,12 @@ export class DashboardPage implements OnInit {
   }
   cargarUsuario(){
     this.usuarioService.obtenerInfoToken().subscribe({
-       next: async(res:any) =>{
-        this.nombreUsuario = await res["nombreUsuario"] || "";
-        this.objetivo = await res["objetivo"] || "";
+       next: (res:any) =>{
+        console.log(res)
+        this.nombreUsuario =  res["nombreUsuario"];
+        this.objetivo =  res["objetivo"];
+        console.log(this.objetivo);
+        console.log(this.nombreUsuario)
       },
       error: (error) =>{
         console.log(error);
@@ -86,6 +78,9 @@ export class DashboardPage implements OnInit {
   borrarToken(){
     if(localStorage.getItem('x-token')){
       localStorage.removeItem('x-token');
+    }
+    if(localStorage.getItem('token')){
+      localStorage.removeItem('token');
     }
   }
   accederFuncionalidad(opcion:string){
