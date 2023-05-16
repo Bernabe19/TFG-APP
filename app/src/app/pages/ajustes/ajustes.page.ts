@@ -146,6 +146,7 @@ export class AjustesPage implements OnInit {
     await toast.present();
   }
   actualizarUsuario(){
+    console.log(this.actualizarForm.value.estado_animico)
     const obj : ActualizarForm = {
       nombreUsuario: this.actualizarForm.value.nombre_usuario || '',
       peso: this.actualizarForm.value.peso ||  0,

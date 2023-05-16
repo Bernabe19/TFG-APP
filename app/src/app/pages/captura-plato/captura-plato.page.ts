@@ -65,15 +65,12 @@ export class CapturaPlatoPage implements OnInit {
       let a = performance.now()
       const pred = await tf.tidy(() => {
       this.src = localStorage.getItem("src") || "";
-      // let im = document.getElementById('img') as HTMLImageElement;
-      const im = new Image()
+      const im = new Image();
       im.src = this.src;
       im.crossOrigin = "anonymus";
       im.onload = () => {
         console.log(im);
-        // Conversion de la iamgen a pixeles con formato [224,224,3]
-        let img = tf.browser.fromPixels(im).resizeBilinear([224,224])
-        // Cambiar forma conforme a la definida en la entrada del modelo [1,224,224,3] Tensor4D
+        let img = tf.browser.fromPixels(im).resizeBilinear([224,224]);
         img = img.reshape([1,224,224,3]);
         img = tf.cast(img, 'float32');
         const output = this.model.predict(img) as any;

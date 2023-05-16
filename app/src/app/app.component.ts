@@ -23,5 +23,8 @@ export class AppComponent {
         this.router.navigateByUrl('inicio');
       }
     }
+    // redirigir(){
+    //   this.router.navigateByUrl('ajustes');
+    // }
 
 }

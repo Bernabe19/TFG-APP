@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="cabecera">
+    <ion-icon (click)="redirigirDashboard()" class="item-header" name="arrow-back-outline"></ion-icon>
+    <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+    <h1 id="click-trigger-estadisticas">i</h1>
+      <ion-popover trigger="click-trigger-estadisticas" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding"><p>Esta es la pantalla de estadísticas, en ella podrás consultar toda la información que has generado en la aplicación.</p></ion-content>
+        </ng-template>
+      </ion-popover>
+  </div>
+  <div class="tarjetas">
+    <div class="tarjeta1 tarjeta-opcion">
+     <h5>Platos consumidos</h5>
+     <h2>{{platos}}</h2>
+    </div>
+    <div class="tarjeta2 tarjeta-opcion">
+      <h5>Suscripciones realizadas</h5>
+      <h2>{{suscripciones}}</h2>
+    </div>
+    <div class="tarjeta3 tarjeta-opcion">
+      <h5>Variación de peso</h5>
+      <h2>{{peso}}kg</h2>
+    </div>
+     <div class="tarjeta4 tarjeta-opcion">
+      <h5>Calorías consumidas</h5>
+      <h2>{{calorias}}kcal</h2>
+      </div>
+      <div class="tarjeta5 tarjeta-opcion">
+        <h5>Carbohidratos consumidos</h5>
+        <h2>{{carbohidratos}}g</h2>
+      </div>
+      <div class="tarjeta6 tarjeta-opcion">
+        <h5>Grasas consumidas</h5>
+        <h2>{{grasas}}g</h2>
+      </div>
+   </div>
+   <div class="tarjeta7 tarjeta-opcion">
+    <h5>Proteínas consumidas</h5>
+    <h2>{{proteinas}}g</h2>
+  </div>
+</ion-content>

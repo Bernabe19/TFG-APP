@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="cabecera">
+    <ion-icon (click)="redirigirDashboard()" class="item-header" name="arrow-back-outline"></ion-icon>
+    <ion-img class="icon-app" src="./../../../assets/logo.png"></ion-img>
+    <h1 id="click-trigger-trofeos">i</h1>
+      <ion-popover trigger="click-trigger-trofeos" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding"><p>Esta es la pantalla de trofeos, en ella podrás ver todos los logros que has conseguido.</p></ion-content>
+        </ng-template>
+      </ion-popover>
+  </div>
+  <div class="trofeos">
+   <div class="conjunto1 conjunto">
+    <img id="trofeo1" src="../../../assets/trofeos/{{platos_estado_animico_trofeo}}.png">
+    <img id="trofeo2" src="../../../assets/trofeos/{{planes_consumidos_trofeo}}.png">
+   </div>
+   <div class="divisor"></div>
+   <div class="conjunto2 conjunto">
+    <img id="trofeo3" src="../../../assets/trofeos/{{platos_perder_peso_trofeo}}.png">
+    <img id="trofeo4" src="../../../assets/trofeos/{{platos_ganar_peso_trofeo}}.png">
+   </div>
+   <div class="divisor"></div>
+   <div class="conjunto3 conjunto">
+    <img id="trofeo5" src="../../../assets/trofeos/{{platos_ganar_musculo_trofeo}}.png">
+   </div>
+   <div class="divisor"></div>
+  </div>
+  <ion-popover trigger="trofeo1" triggerAction="click">
+    <ng-template>
+      <ion-content class="ion-padding">Captura al menos 20 platos manteniendo un estado anímico positivo.<br/> Conseguido: {{platos_estado_animico}}/20</ion-content>
+    </ng-template>
+  </ion-popover>
+  <ion-popover trigger="trofeo2" triggerAction="click">
+    <ng-template>
+      <ion-content class="ion-padding">Consume todos los planes de la aplicación. <br/>Conseguido: {{planes_consumidos}}/3</ion-content>
+    </ng-template>
+  </ion-popover>
+  <ion-popover trigger="trofeo3" triggerAction="click">
+    <ng-template>
+      <ion-content class="ion-padding">Consume 10 platos con menos de 8 gramos de grasas estando suscrito al plan "Perder peso".<br/> Conseguido: {{platos_perder_peso}}/10</ion-content>
+    </ng-template>
+  </ion-popover>
+  <ion-popover trigger="trofeo4" triggerAction="click">
+    <ng-template>
+      <ion-content class="ion-padding">Consume 10 platos con más de 25 gramos de carbohidratos estando suscrito al plan "Ganar peso".<br/> Conseguido: {{platos_ganar_peso}}/10</ion-content>
+    </ng-template>
+  </ion-popover>
+  <ion-popover trigger="trofeo5" triggerAction="click">
+    <ng-template>
+      <ion-content class="ion-padding">Consume 10 platos con más de 8 gramos de proteínas estando suscrito al plan "Ganar músculo".<br/> Conseguido: {{platos_ganar_musculo}}/10</ion-content>
+    </ng-template>
+  </ion-popover>
+</ion-content>

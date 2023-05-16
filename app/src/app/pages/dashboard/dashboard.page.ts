@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
-  public nombreUsuario : string = "an";
+  public nombreUsuario : string = "";
   public objetivo : number = -1;
+
   constructor(
     private usuarioService: UsuarioService,
     private alertController: AlertController,
